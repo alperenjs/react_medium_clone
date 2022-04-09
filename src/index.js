@@ -2,17 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppRoutes from 'routes';
-
-
+import Topbar from 'components/Topbar';
 
 const App = () => {
   return (
-    <div className="App">
-      <h3>Welcome here is our app</h3>
-      <Router>
-        <AppRoutes />
-      </Router>
-    </div>
+    <Router>
+      <Topbar />
+      <AppRoutes />
+    </Router>
   );
 }
 
