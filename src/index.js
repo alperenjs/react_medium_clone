@@ -3,13 +3,16 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRoutes from "routes";
 import Topbar from "components/Topbar";
+import { CurrentUserProvider } from "contexts/currentUser";
 
 const App = () => {
   return (
-    <Router>
-      <Topbar />
-      <AppRoutes />
-    </Router>
+    <CurrentUserProvider>
+      <Router>
+        <Topbar />
+        <AppRoutes />
+      </Router>
+    </CurrentUserProvider>
   );
 };
 
