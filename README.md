@@ -30,6 +30,7 @@ Some Fun Facts:
 * Experienced many React hooks such as useState, useEffect, useCallback, useContext
 * Used React Context for storing currentUser
 * React-router-dom
+* Pagination
 
 <!-- ABOUT THE PROJECT -->
 How to run on local
