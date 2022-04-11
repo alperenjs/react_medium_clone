@@ -1,10 +1,11 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router } from "react-router-dom";
-import AppRoutes from "routes";
-import Topbar from "components/Topbar";
-import { CurrentUserProvider } from "contexts/currentUser";
-import CurrentUserChecker from "components/CurrentUserCHecker";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
+
+import Routes from 'routes'
+import Topbar from 'components/topbar'
+import {CurrentUserProvider} from 'contexts/currentUser'
+import CurrentUserChecker from 'components/currentUserChecker'
 
 const App = () => {
   return (
@@ -12,17 +13,11 @@ const App = () => {
       <CurrentUserChecker>
         <Router>
           <Topbar />
-          <AppRoutes />
+          <Routes />
         </Router>
       </CurrentUserChecker>
     </CurrentUserProvider>
-  );
-};
+  )
+}
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-root.render(<App />);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ReactDOM.render(<App />, document.getElementById('root'))
